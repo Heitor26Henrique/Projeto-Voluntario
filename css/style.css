@@ -475,3 +475,65 @@ nav{
     margin-bottom:30px;
 
 }
+
+/* ==========================================
+            FORMULÁRIO
+========================================== */
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.campo label{
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+    color:#2E7D32;
+
+}
+
+.campo input,
+.campo select,
+.campo textarea{
+
+    padding:14px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus{
+
+    border-color:#2E7D32;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+}
