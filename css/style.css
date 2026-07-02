@@ -344,3 +344,70 @@ nav{
     margin-bottom:20px;
 
 }
+
+/* ==========================================
+            OBJETIVOS
+========================================== */
+
+.objetivos{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:100px auto;
+
+    text-align:center;
+
+}
+
+.objetivos h2{
+
+    font-size:36px;
+
+    color:#2E7D32;
+
+    margin-bottom:50px;
+
+}
+
+.objetivos-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.card-objetivo{
+
+    width:300px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+.card-objetivo:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card-objetivo h3{
+
+    margin-bottom:15px;
+
+    color:#2E7D32;
+
+}
