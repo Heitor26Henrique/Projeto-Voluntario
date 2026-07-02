@@ -2,7 +2,8 @@
 // Validação do Formulário
 // ==========================================
 
-const necessidades = [];
+const necessidades =
+    JSON.parse(localStorage.getItem("necessidades")) || [];
 const formulario = document.getElementById("formCadastro");
 
 formulario.addEventListener("submit", validarFormulario);
@@ -59,9 +60,13 @@ function validarFormulario(event) {
 
 necessidades.push(necessidade);
 
+localStorage.setItem(
+    "necessidades",
+    JSON.stringify(necessidades)
+);
+
 console.log(necessidades);
 
 alert("Necessidade cadastrada com sucesso!");
-
 formulario.reset();
 }
