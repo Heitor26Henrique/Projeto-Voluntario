@@ -2,6 +2,7 @@
 // Validação do Formulário
 // ==========================================
 
+const necessidades = [];
 const formulario = document.getElementById("formCadastro");
 
 formulario.addEventListener("submit", validarFormulario);
@@ -32,6 +33,35 @@ function validarFormulario(event) {
 
     }
 
-    alert("Validação realizada com sucesso!");
+   const necessidade = {
 
+    instituicao,
+
+    tipoAjuda,
+
+    titulo,
+
+    descricao,
+
+    cep,
+
+    rua: document.getElementById("rua").value,
+
+    bairro: document.getElementById("bairro").value,
+
+    cidade: document.getElementById("cidade").value,
+
+    estado: document.getElementById("estado").value,
+
+    contato
+
+};
+
+necessidades.push(necessidade);
+
+console.log(necessidades);
+
+alert("Necessidade cadastrada com sucesso!");
+
+formulario.reset();
 }
