@@ -277,3 +277,70 @@ nav{
     background:#1565C0;
 
 }
+
+/* ==========================================
+        COMO FUNCIONA
+========================================== */
+
+.como-funciona{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:100px auto;
+
+    text-align:center;
+
+}
+
+.como-funciona h2{
+
+    color:#2E7D32;
+
+    margin-bottom:50px;
+
+    font-size:36px;
+
+}
+
+.passos{
+
+    display:flex;
+
+    gap:30px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+.passo{
+
+    background:white;
+
+    width:300px;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+.passo:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.passo h3{
+
+    color:#2E7D32;
+
+    margin-bottom:20px;
+
+}
