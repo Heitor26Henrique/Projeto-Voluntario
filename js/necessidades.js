@@ -6,18 +6,55 @@ const necessidades =
     JSON.parse(localStorage.getItem("necessidades")) || [];
 
 const lista = document.getElementById("listaNecessidades");
+const pesquisa = document.getElementById("pesquisa");
 
-if (necessidades.length === 0) {
+// Carrega todas as necessidades
+mostrarNecessidades(necessidades);
 
-    lista.innerHTML = `
-        <p class="sem-registros">
-            Nenhuma necessidade cadastrada.
-        </p>
-    `;
+// Pesquisa em tempo real
+pesquisa.addEventListener("input", pesquisar);
 
-} else {
+// ================================
 
-    necessidades.forEach(necessidade => {
+function pesquisar() {
+
+    const texto = pesquisa.value.toLowerCase();
+
+    const resultado = necessidades.filter(necessidade =>
+
+        necessidade.titulo.toLowerCase().includes(texto) ||
+
+        necessidade.descricao.toLowerCase().includes(texto)
+
+    );
+
+    mostrarNecessidades(resultado);
+
+}
+
+// ================================
+
+function mostrarNecessidades(listaNecessidades) {
+
+    lista.innerHTML = "";
+
+    if (listaNecessidades.length === 0) {
+
+        lista.innerHTML = `
+
+            <p class="sem-registros">
+
+                Nenhuma necessidade encontrada.
+
+            </p>
+
+        `;
+
+        return;
+
+    }
+
+    listaNecessidades.forEach(necessidade => {
 
         lista.innerHTML += `
 
@@ -32,13 +69,19 @@ if (necessidades.length === 0) {
             <p>${necessidade.descricao}</p>
 
             <p>
+
                 <strong>Local:</strong>
+
                 ${necessidade.cidade} - ${necessidade.estado}
+
             </p>
 
             <p>
+
                 <strong>Contato:</strong>
+
                 ${necessidade.contato}
+
             </p>
 
         </div>
