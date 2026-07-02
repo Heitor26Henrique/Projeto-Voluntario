@@ -338,3 +338,85 @@ footer p{
     }
 
 }
+/* ==========================================
+        PÁGINA NECESSIDADES
+========================================== */
+
+.pagina-necessidades{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:60px auto;
+
+}
+
+.pagina-necessidades h1{
+
+    color:#2E7D32;
+
+    margin-bottom:15px;
+
+}
+
+.pagina-necessidades>p{
+
+    margin-bottom:40px;
+
+    color:#666;
+
+}
+
+#listaNecessidades{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.card h2{
+
+    color:#2E7D32;
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    margin:8px 0;
+
+}
+
+.sem-registros{
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:18px;
+
+}
