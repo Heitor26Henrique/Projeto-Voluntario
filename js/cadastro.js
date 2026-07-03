@@ -28,9 +28,13 @@ function validarFormulario(event) {
         contato === ""
     ) {
 
-        alert("Preencha todos os campos obrigatórios.");
+        const mensagem = document.getElementById("mensagem");
 
-        return;
+mensagem.className = "erro";
+
+mensagem.textContent = "Preencha todos os campos obrigatórios.";
+
+return;
 
     }
 
@@ -67,6 +71,11 @@ localStorage.setItem(
 
 console.log(necessidades);
 
-alert("Necessidade cadastrada com sucesso!");
+const mensagem = document.getElementById("mensagem");
+
+mensagem.className = "sucesso";
+
+mensagem.textContent = "Necessidade cadastrada com sucesso!";
+
 formulario.reset();
 }

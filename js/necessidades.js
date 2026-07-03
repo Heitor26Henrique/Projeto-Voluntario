@@ -77,7 +77,15 @@ function mostrarNecessidades(listaNecessidades) {
 
             <p><strong>Instituição:</strong> ${necessidade.instituicao}</p>
 
-            <p><strong>Tipo:</strong> ${necessidade.tipoAjuda}</p>
+            <p>
+
+            <span class="badge">
+
+            ${necessidade.tipoAjuda}
+
+            </span>
+
+            </p>
 
             <p>${necessidade.descricao}</p>
 
